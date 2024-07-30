@@ -22,7 +22,7 @@ export function PostCard({ post }: Props) {
         <CardTitle>
           <div className="grid grid-cols-6 items-center">
             <span className="col-span-5">{post.title}</span>
-            <DeletePostBtn />
+            <DeletePostBtn id={post.id} />
           </div>
         </CardTitle>
         <CardDescription>{post.body}</CardDescription>

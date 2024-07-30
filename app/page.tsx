@@ -4,7 +4,7 @@ import { getUsers } from "@/services/users";
 // Components
 import { UsersList } from "@/components/lists/UsersList";
 
-export default async function () {
+export default async function Init() {
   const users = await getUsers();
 
   return (
