@@ -13,6 +13,7 @@ import {
 import { 
   Eye, 
   Globe, 
+  Mail, 
   Phone 
 } from "lucide-react";
 
@@ -35,13 +36,17 @@ export function UserCard({ user }: Props) {
     <Card className="bg-blue-100">
       <CardHeader>
         <CardTitle>{user.name}</CardTitle>
-        <CardDescription>{user.username} - {user.email}</CardDescription>
+        <CardDescription>{user.username}</CardDescription>
       </CardHeader>
       <CardContent>
         <ul>
           <li className="flex items-center mb-3">
             <Phone className="mr-2" />
             {user.phone}
+          </li>
+          <li className="flex items-center mb-3">
+            <Mail className="mr-2" />
+            {user.email}
           </li>
           <li className="flex items-center">
             <Globe className="mr-2" />

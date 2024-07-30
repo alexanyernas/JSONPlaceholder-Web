@@ -6,9 +6,7 @@ import {
   CardTitle
 } from "@/components/ui/card";
 
-import { Button } from "../ui/button";
-
-import { Trash } from "lucide-react";
+import { DeletePostBtn } from "../buttons/DeletePostBtn";
 
 // Interfaces
 import { Post } from "@/interfaces/posts";
@@ -22,10 +20,10 @@ export function PostCard({ post }: Props) {
     <Card className="bg-blue-100">
       <CardHeader>
         <CardTitle>
-            {post.title}
-            <Button variant="link" size="icon" className="ml-2">
-              <Trash className="h-4 w-4" />
-            </Button>
+          <div className="grid grid-cols-6 items-center">
+            <span className="col-span-5">{post.title}</span>
+            <DeletePostBtn />
+          </div>
         </CardTitle>
         <CardDescription>{post.body}</CardDescription>
       </CardHeader>
